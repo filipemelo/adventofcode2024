@@ -10,6 +10,9 @@ run-day:
 run-day-01:
 	go run ./days/01/main.go
 
+run-day-02:
+	go run ./days/02/main.go
+
 clean:
 	rm -f days/*/day*
 

@@ -3,9 +3,11 @@ package internal
 import (
 	"fmt"
 	"log"
+	"math"
 	"os"
 	"path/filepath"
 	"runtime"
+	"strconv"
 	"strings"
 )
 
@@ -30,4 +32,13 @@ func ReadFile(filename string, dayStr string) *os.File {
 
 	}
 	return file
+}
+
+func AbsDiff(num1 int, num2 int) int {
+	return int(math.Abs(float64(num1 - num2)))
+}
+
+func ReadInt(numStr string) int {
+	num, _ := strconv.Atoi(numStr)
+	return num
 }
