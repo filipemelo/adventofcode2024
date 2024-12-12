@@ -10,6 +10,7 @@ Filipe Cotrim Melo - Backend developer for this challenge I will use Go. But I h
 
 ## Days ##
 * Day 01 - #day01 - List puzzle, sum abs diff, count similarity
+* Day 02 - #day02 - Safe reports, 
 
 ## Project structure ##
 - `days/`: Folder with daily solution
