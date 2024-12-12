@@ -5,7 +5,10 @@ build:
 
 run-day:
 	@read -p "Input the day number format (dd): " day; \
-		go run days/$$day/main.go
+		go run ./days/$$day/main.go
+
+run-day-01:
+	go run ./days/01/main.go
 
 clean:
 	rm -f days/*/day*
