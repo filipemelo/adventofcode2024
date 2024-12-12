@@ -1,0 +1,11 @@
+# Binaries
+days/*/day*
+
+# Temp
+*.out
+*.log
+
+# Editor
+.vscode/
+.idea/
+.DS_Store
