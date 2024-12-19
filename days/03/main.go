@@ -2,7 +2,6 @@ package main
 
 import (
 	"regexp"
-	"strconv"
 	"strings"
 
 	"github.com/filipemelo/adventofcode2024/internal"
@@ -28,8 +27,8 @@ func sumMul(part string) int {
 
 	for _, m := range matches {
 		//println(m[0], m[1], m[2])
-		num1, _ := strconv.Atoi(m[1])
-		num2, _ := strconv.Atoi(m[2])
+		num1 := internal.ReadInt(m[1])
+		num2 := internal.ReadInt(m[2])
 
 		result += num1 * num2
 	}
