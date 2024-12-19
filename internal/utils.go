@@ -11,8 +11,14 @@ import (
 	"strings"
 )
 
-func ReadFileAsString(filename string) string {
-	data, err := os.ReadFile(filename)
+func ReadFileAsString(filename string, dayStr string) string {
+	_, run, _, _ := runtime.Caller(0)
+	dir := filepath.Dir(run)
+
+	filePath := filepath.Join(dir, "..", "days", dayStr, filename)
+	fmt.Println(filePath)
+
+	data, err := os.ReadFile(filePath)
 	if err != nil {
 		log.Fatalf("File reading error %s: %v", filename, err)
 	}

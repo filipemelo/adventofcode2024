@@ -2,6 +2,7 @@ package internal_test
 
 import (
 	"bufio"
+	"strings"
 	"testing"
 
 	"github.com/filipemelo/adventofcode2024/internal"
@@ -9,11 +10,13 @@ import (
 )
 
 func TestReadFileAsString(t *testing.T) {
-	filename := "testdata/example.txt"
-	expected := "This is just an exemple text file =)"
+	filename := "input.txt"
+	expectedFirstLine := "37033   48086"
 
-	actual := internal.ReadFileAsString(filename)
-	assert.Equal(t, expected, actual, "The contented doesn't match.")
+	actual := internal.ReadFileAsString(filename, "01")
+	firstLine := strings.Split(actual, "\n")[0]
+
+	assert.Equal(t, expectedFirstLine, firstLine, "The contented doesn't match.")
 }
 
 func TestReadFile(t *testing.T) {
